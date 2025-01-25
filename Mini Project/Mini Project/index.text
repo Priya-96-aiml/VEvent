@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Event App</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>
+                    <img alt="App logo" class="inline-block mr-2" height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd9ACylCTCloyvDDIWqmqBKxBWDqidbWC2Kg&s" width="50"/>
+                    <span class="highlight">Virtual</span> Event
+                </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                    <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="showcase">
+        <div class="container">
+            <h1>Welcome to Virtual Event</h1>
+            <p>Join and explore various events virtually from the comfort of your home.</p>
+        </div>
+    </section>
+    <section id="newsletter">
+        <div class="container">
+            <h1>Stay Updated</h1>
+            <form>
+                <input placeholder="Enter Email..." type="email"/>
+                <button class="button_1" type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    <div class="container main-content">
+        <h2>Upcoming Events</h2>
+        <div class="search-bar">
+            <input id="search-input" placeholder="Search by event name or place..." type="text"/>
+            <button onclick="searchEvents()" type="button">Search</button>
+        </div>
+        <div class="event" id="event-list">
+            <!-- Event items here -->
+        </div>
+        <div class="search-bar">
+            <button class="button_1">Join Live Webinar</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <p><a href="mailto:mjpriya0906@gmail.com" style="color: #fff;">Message to Planner</a></p>
+    </footer>
+    <script>
+        // Your JavaScript code here
+    </script>
+</body>
+</html>
